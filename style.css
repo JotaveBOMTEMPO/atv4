@@ -1,0 +1,58 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom right, #667db6, #764ba2);
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-style: italic;
+}
+
+#caixa {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #d3c0f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: #394867;
+    text-align: center;
+}
+
+.campo {
+    margin-top: 10px;
+    color: #6a0572;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #59405c;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4967ad;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #405c8d;
+    transform: scale(1.05);
+    color: black;
+}
