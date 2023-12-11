@@ -19,8 +19,7 @@ function analisa_cadastro(req, res) {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" type="image/x-icon" href="favicon.ico">
-            <link rel="stylesheet" type="text/css" href="estilizacao.css">
+            <link rel="stylesheet" type="text/css" href="style.css">
             <title>Cadastro</title>
         </head>
         <body>
@@ -153,7 +152,7 @@ function process_autentic(req, res, next) {
     if (req.session.user_autentic) {
         next();
     } else {
-        res.redirect("/login.html");
+        res.redirect("/menu.html");
     }
 }
 
@@ -161,7 +160,7 @@ const app = express();
 app.use(cookieParser());
 
 app.use(session({
-    secret: "Minh4Chav3S3cr3T4",
+    secret: "myS3CR3T",
     resave: true,
     saveUninitialized: true,
     cookie: {
@@ -189,7 +188,7 @@ app.get('/formulario.html', process_autentic, (req, res) => {
 
 app.post('/formulario.html', process_autentic, analisa_cadastro);
 
-app.post('/login', (req, res) => {
+app.post('/menu', (req, res) => {
     const usuario = req.body.usuario;
     const senha = req.body.senha;
 
@@ -208,7 +207,7 @@ app.post('/login', (req, res) => {
                 </head>
                 <body>
                     <h1>Usuario ou senha invalidos</h1>
-                    <a href="/login.html">Voltar ao login</a>
+                    <a href="/menu.html">Voltar ao Menu</a>
                 </body> 
         `)
     }
